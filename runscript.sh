@@ -4,6 +4,6 @@ mvn install
 PID=-1
 PID=$(ps -ef | grep $APP | grep -v grep | awk '{print $2}')
 if [[ ! $PID==-1 ]]; then
-  kill -l KILL $PID 
+  kill -9 $PID 
 fi
 BUILD_ID=dontKillMe nohup java -jar target/$APP &
