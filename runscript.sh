@@ -7,3 +7,4 @@ if [[ ! $PID==-1 ]]; then
   kill -9 $PID 
 fi
 BUILD_ID=dontKillMe nohup java -jar target/$APP &
+sleep 5
