@@ -6,5 +6,6 @@ PID=$(ps -ef | grep $APP | grep -v grep | awk '{print $2}')
 if [[ ! $PID==-1 ]]; then
   kill -9 $PID 
 fi
-BUILD_ID=dontKillMe nohup java -jar target/$APP &
+BUILD_ID=dontKillMe
+nohup java -jar target/$APP &
 sleep 5
